@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Web | Projeto HTML, CSS &amp; JavaScript</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Navegação principal">
+      <a href="#inicio" class="logo">DevPortfolio</a>
+
+      <button
+        id="menu-toggle"
+        class="menu-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-btn" type="button" aria-label="Alternar tema">
+            🌙 Modo Escuro
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero container">
+      <div class="hero-content">
+        <span class="badge">Desenvolvimento Front-End</span>
+        <h1>Olá! Eu construo interfaces web modernas e responsivas.</h1>
+        <p>
+          Projeto desenvolvido com HTML5 semântico, CSS3 moderno e JavaScript puro
+          para demonstrar interatividade, acessibilidade e design responsivo.
+        </p>
+        <div class="hero-actions">
+          <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+          <a href="#contato" class="btn btn-secondary">Entrar em Contato</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="section container">
+      <h2>Sobre o Projeto</h2>
+      <div class="about-grid">
+        <article class="card">
+          <h3>HTML5 Semântico</h3>
+          <p>
+            Estrutura organizada com tags semânticas (<code>header</code>, <code>nav</code>,
+            <code>main</code>, <code>section</code>, <code>footer</code>) para melhor acessibilidade e SEO.
+          </p>
+        </article>
+        <article class="card">
+          <h3>CSS3 Responsivo</h3>
+          <p>
+            Uso de variáveis CSS, Flexbox, Grid Layout e suporte completo a tema claro e escuro
+            adaptável a qualquer tamanho de tela.
+          </p>
+        </article>
+        <article class="card">
+          <h3>JavaScript Interativo</h3>
+          <p>
+            Alternância de tema com persistência em <code>localStorage</code>, filtro dinâmico de projetos,
+            menu mobile e validação de formulário.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projetos" class="section container">
+      <div class="section-header">
+        <h2>Projetos</h2>
+        <div class="filter-group" role="group" aria-label="Filtrar projetos por categoria">
+          <button class="filter-btn active" type="button" data-filter="all">Todos</button>
+          <button class="filter-btn" type="button" data-filter="web">Web</button>
+          <button class="filter-btn" type="button" data-filter="js">JavaScript</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="card project-card" data-category="web">
+          <span class="tag">HTML &amp; CSS</span>
+          <h3>Landing Page Responsiva</h3>
+          <p>Página de apresentação com layout fluido em Grid e tipografia adaptativa.</p>
+        </article>
+
+        <article class="card project-card" data-category="js">
+          <span class="tag">JavaScript</span>
+          <h3>Lista de Tarefas (To-Do)</h3>
+          <p>Aplicação interativa para adicionar, concluir e remover tarefas no navegador.</p>
+        </article>
+
+        <article class="card project-card" data-category="web">
+          <span class="tag">UI / UX</span>
+          <h3>Painel com Tema Escuro</h3>
+          <p>Interface com alternância de cores usando variáveis CSS e preferência salva.</p>
+        </article>
+
+        <article class="card project-card" data-category="js">
+          <span class="tag">JavaScript</span>
+          <h3>Calculadora de Orçamento</h3>
+          <p>Ferramenta simples para cálculo de receitas e despesas com atualização em tempo real.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contato" class="section container">
+      <h2>Contato</h2>
+      <form id="contact-form" class="contact-form card" novalidate>
+        <div class="form-group">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" placeholder="Seu nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="message">Mensagem</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escreva sua mensagem..." required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="current-year"></span> DevPortfolio. Publicado no GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
